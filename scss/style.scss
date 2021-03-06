@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap');
+
+// COLORS
+$moderateViolet: hsl(263, 55%, 52%);
+$darkGrayishBlue: hsl(217, 19%, 35%);
+$darkBlackishBlue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+
+$lightGray: hsl(0, 0%, 81%);
+$lightGrayishBlue: hsl(210, 46%, 95%);
+
+
+// STYLES
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.testimonials {
+   display: flex;
+   flex-direction: column;
+   gap: 1.5625rem;
+
+   background-color: $lightGrayishBlue;
+   padding-top: 3rem;
+
+   &__dan {
+      position: relative;
+
+      color: $white;
+      background-color: $moderateViolet;
+   }
+
+   &__jon { 
+      color: $white;
+      background-color: $darkGrayishBlue;
+   }
+   
+   &__patrick { 
+      color: $white;
+      background-color: $darkBlackishBlue;
+   }
+   
+   &__jean,
+   &__kira { 
+      color: $darkGrayishBlue;
+      background-color: $white;
+   }
+
+   &__quote {
+      position: absolute;
+      top: 0;
+      right: 1.5625rem;
+
+      height: 6.875rem;
+   }
+
+   &__default {
+      border-radius: 0.3125rem;
+      width: 90%;
+      max-width: 31.25rem;
+      padding: 1.5625rem 2.625rem 2.1875rem 2.125rem;
+      margin: auto;
+   }
+
+   &__person {
+      display: flex;
+      align-items: center;
+
+      margin-bottom: 1.375rem;
+
+      &--photo {
+         height: 2.5rem;
+         width: 2.5rem;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         border-radius: 3.125rem;
+         border: 2px solid rgba(255, 255, 255, .7);
+         margin-right: 0.9375rem;
+      }
+   }
+
+   &__info {
+
+      &--name {
+         font-size: 0.6875rem;
+      }
+
+      &--role {
+         font-size: 0.625rem;
+         opacity: 50%;
+      }
+   }
+
+   &__title {
+      position: relative;
+      z-index: 1;
+
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 1.5625rem;
+   }
+
+   &__body {
+      font-size: 1rem;
+      opacity: 70%;
+      line-height: 1.1;
+   }
+}
